@@ -7,11 +7,51 @@
 :root {
     --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
+
+/* TOPBAR */
 .topbar {
-    
     box-shadow: var(--box-shadow);
 }
 
 .navbar-toggler {
     margin-right: 1.5rem;
+}
+
+.btn-tweet {
+    border-radius: 35px;
+    padding: 10px 25px;
+}
+
+/* HOME PAGE */
+.container-main {
+    display: flex;
+    width: 80%;
+}
+
+@media (max-width: 770px) {
+    .container-main {
+        flex-direction: column !important;
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+/* PROFILE */
+.profile-container {
+    width: 30%;
+}
+
+@media (max-width: 770px) {
+    .profile-container {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+/* Tweets container */
+@media (max-width: 770px) {
+    .tweets-container {
+        width: 100%;
+    }
 }
