@@ -1,11 +1,18 @@
 .profile-container {
     width: 20%;
-    height: 100%;
-    padding: 2.5rem;
+    height: 70%;
     background-color: $secondary-color-dark;
+    padding: 2.5rem;
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    box-shadow: $box-shadow;
+    border-radius: 10px;
 
     @include xs {
         position: fixed;
+        top: auto;
+        border-radius: 0px;
         bottom: 0;
         left: 0;
         width: 100%;

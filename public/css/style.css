@@ -40,13 +40,20 @@ a {
 
 .profile-container {
   width: 20%;
-  height: 100%;
-  padding: 2.5rem;
+  height: 70%;
   background-color: #b2bec3;
+  padding: 2.5rem;
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 10px;
 }
 @media (max-width: 480px) {
   .profile-container {
     position: fixed;
+    top: auto;
+    border-radius: 0px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -103,49 +110,6 @@ a {
 .tweets-container .tweet-list form .form-body .form-item:last-child {
   text-align: right;
 }
-.tweets-container .tweet-list .tweet-card {
-  width: 50%;
-  border: 1px solid #333;
-  border-radius: 5px;
-  margin-top: 2rem;
-  padding: 1.5rem;
-}
-@media (max-width: 480px) {
-  .tweets-container .tweet-list .tweet-card {
-    width: 100%;
-  }
-}
-.tweets-container .tweet-list .tweet-card-author {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tweets-container .tweet-list .tweet-card-author img {
-  width: 2.5rem;
-}
-.tweets-container .tweet-list .tweet-card-author p {
-  margin-left: 1rem;
-}
-.tweets-container .tweet-list .tweet-card-body {
-  padding: 1rem;
-}
-.tweets-container .tweet-list .tweet-card-actions {
-  margin-top: 2rem;
-  border-top: 1px solid #eee;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tweets-container .tweet-list .tweet-card-actions i {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  cursor: pointer;
-}
 
 .btn {
   padding: 10px 15px;
@@ -164,6 +128,64 @@ a {
 }
 .btn-secondary:hover {
   background-color: #00ACEE;
+}
+
+.tweet-card {
+  width: 50%;
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+@media (max-width: 480px) {
+  .tweet-card {
+    width: 100%;
+  }
+}
+.tweet-card-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-card-author-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-card-author-data img {
+  width: 2.5rem;
+}
+.tweet-card-author-data p {
+  margin-left: 1rem;
+}
+.tweet-card-author-actions a {
+  color: #333;
+}
+.tweet-card-author-actions a i {
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.tweet-card-body {
+  padding: 1rem;
+}
+.tweet-card-actions {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tweet-card-actions i {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  cursor: pointer;
 }
 
 .content {
