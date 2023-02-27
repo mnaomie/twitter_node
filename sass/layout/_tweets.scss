@@ -5,10 +5,10 @@
 
     .tweet-list {
         width: 80%;
+        margin-bottom: 40%;
         @include flex($direction: column);
 
         
-
         form {
             margin-top: 2rem;
             width: 50%;
