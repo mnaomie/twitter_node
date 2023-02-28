@@ -17,6 +17,9 @@ block content
                     .input-box 
                         input#password(type="password" name="password" placeholder="Password")
                     .input-box 
+                        p Vous avez un compte ?
+                            a(href="/auth/signin/form") Se connecter
+                    .input-box 
                         input(type="submit", class="btn btn-primary" value="S'inscrire")
                     if errors 
                         ul 

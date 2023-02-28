@@ -1,1 +1,7 @@
-p Profil
+if isAuthenticated 
+    .profile
+        .profile-img 
+            img(src="https://cdn.discordapp.com/attachments/832919369260466226/1052515176563347487/SinbadIDACIA.png", alt="")
+        .profile-info 
+            h3 @#{currentUser.username}
+            p #{currentUser.firstname} #{currentUser.lastname}

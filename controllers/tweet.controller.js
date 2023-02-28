@@ -15,7 +15,10 @@ exports.createTweet = async (req, res, next) => {
 exports.tweetlist = async (req, res, next) => {
     try {
         const tweets = await findAllTweets();
-        res.render('tweets/tweet-list', { tweets })
+        res.render('tweets/tweet-list', { tweets, 
+            isAuthenticated: req.isAuthenticated(),
+            currentUser: req.user 
+        })
     } catch (error) {
         next(error)
     }
