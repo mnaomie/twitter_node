@@ -48,5 +48,29 @@
             }
         }
 
+        &-actions {
+            margin-top: 30px;
+
+            @include xs {
+                @include flex;
+                margin-top: 0;
+            }
+        }
+
+        &-data {
+            width: 100%;
+            margin-top: 30px;
+            @include flex;
+
+            @include xs {
+                display: hidden;
+            }
+
+            &-posts, &-followers, &-following {
+                @include flex($direction: column);
+                margin-right: 10px;
+            }
+        }
+
     }
 }
