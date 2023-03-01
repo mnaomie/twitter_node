@@ -4,8 +4,9 @@ const userRoute = require('./user.routes')
 const { tweetlist } = require('../controllers/tweet.controller');
 const { route } = require('./tweet.routes');
 const authRoute = require('./auth.routes');
+const { ensureAuthenticated } = require('../config/security.config');
 
-router.use('/tweet', tweetRoute);
+router.use('/tweet', ensureAuthenticated, tweetRoute);
 router.use('/user', userRoute)
 router.use('/auth', authRoute)
 
