@@ -1,4 +1,4 @@
-const { createNewTweet, findAllTweets, findTweetAndDelete } = require("../queries/tweet.queries");
+const { createNewTweet, findAllTweets, findTweetAndDelete, findTweetById, findTweetAndUpdate } = require("../queries/tweet.queries");
 
 exports.createTweet = async (req, res, next) => {
     try {
@@ -27,6 +27,27 @@ exports.deleteTweet = async (req, res, next) => {
     try {
         const tweetId = req.params.tweetId
         await findTweetAndDelete(tweetId)
+        res.redirect('/')
+    } catch (error) {
+        next(error)
+    }
+}
+
+exports.displayTweet = async (req, res, next) => {
+    try {
+        const tweetId = req.params.tweetId
+        const tweet = await findTweetById(tweetId);
+        res.render('tweets/tweet-edit', { tweet, isAuthenticated: req.isAuthenticated, currentUser: req.user })
+    } catch (error) {
+        next(error)
+    }
+}
+
+exports.updateTweet = async (req, res, next) => {
+    try {
+        const tweetId = req.params.tweetId
+        const body = req.body;
+        await findTweetAndUpdate(tweetId, body)
         res.redirect('/')
     } catch (error) {
         next(error)
