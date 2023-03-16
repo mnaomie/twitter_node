@@ -34,8 +34,6 @@ window.addEventListener('DOMContentLoaded', () => {
                     })
                     .catch(error => console.log(error))
             }, 1000)
-        } else {
-            resultContainer.style.display = 'none'
         }
         
     })
