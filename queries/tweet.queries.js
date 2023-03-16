@@ -10,7 +10,7 @@ exports.findAllTweets = () => {
 }
 
 exports.getCurrentUserTweetsFollowing = (user) => {
-    return Tweet.find({ author: { $in: [...user.followings, user._id]}}).populate.exec();
+    return Tweet.find({ author: { $in: [...user.followings, user._id]}}).populate('author').exec();
 }
 
 exports.findTweetsFromUsername = (authorId) => {
